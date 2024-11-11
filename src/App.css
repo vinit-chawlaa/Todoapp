@@ -48,7 +48,22 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(0, 255, 251);
+  background: linear-gradient(135deg, #0B3D91, #00FFFF, #0B3D91);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 .TodoContainer{
@@ -73,7 +88,14 @@ input{
   width: 100%;
   padding: 10px;
   font-size: 18px;
-  margin: 10px 0px;  
+  margin: 10px 0px; 
+  outline: none;
+  border: none; 
+}
+
+input:focus{
+  outline: 2px solid #00FFFF;
+ box-shadow: 0 0 5px #00FFFF;
 }
 
 h1{
@@ -91,6 +113,7 @@ h1{
   border: none;
   font-size: 15px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 
@@ -108,6 +131,7 @@ ol li{
   background-color: red;
   color: white;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .edit{
@@ -118,6 +142,7 @@ ol li{
   background-color: rgb(7, 156, 248);
   color: white;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .box {
@@ -145,7 +170,31 @@ ol li{
   .Todo{
     padding-left: 80px;
   }
+
+  input{
+    font-size: 16px;
+  }
 }
+
+@media screen and (max-width:350px) {
+  input{
+    font-size: 13px;
+  }
+}
+
+.reset{
+  width: 100%;
+  text-wrap: nowrap;
+  padding: 10px;
+  margin: 10px 0px 30px;
+  border: none;
+  font-size: 16px;
+  background-color: rgb(78, 255, 47);
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 
 
 

@@ -34,6 +34,11 @@ const Todo = () => {
             if (isediting) {
                 const update = task.map((t, i) => i === currentindex ? inputvalue : t)
                 setTask(update)
+
+                if(update)
+                {
+                    window.scrollTo(0,document.body.scrollHeight)
+                }
                 setIsediting(false)
                 setCurrentindex(null)
             }
@@ -57,6 +62,11 @@ const Todo = () => {
     const handledelete = (idx) => {
         const newtask = task.filter((_, i) => i !== idx)
         setTask(newtask)
+        if (isediting && currentindex === idx) {
+            setInputvalue(''); 
+            setIsediting(false); 
+        }
+
         console.log("Tasks after deletion:", newtask);
     }
 
@@ -68,6 +78,10 @@ const Todo = () => {
         inputref.current.focus();
     }
 
+    const resetTodo = () =>{
+        setTask([])
+    }
+
    
     return (
         <div className="TodoContainer">
@@ -77,13 +91,14 @@ const Todo = () => {
            <input
                 type="text"
                 value={inputvalue}
-                placeholder="Add Todo..."
+                placeholder="Add a new task..."
                 onChange={(e) => setInputvalue(e.target.value)}
                 ref={inputref}
             />
            </form>
 
             <button className="btn"  onClick={addtask}>{isediting ? 'Update Task' : 'Add Task'}</button>
+            <button className="reset" onClick={resetTodo}>Reset Todos</button>
 
             <ol>
                 {task.map((item, idx) => (
