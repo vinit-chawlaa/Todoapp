@@ -32,79 +32,66 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 
-body{
-  min-height: 100vh; 
+body {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #0B3D91, #00FFFF, #0B3D91);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-.TodoContainer{
+.TodoContainer {
   width: 100%;
   max-width: 500px;
   overflow: hidden;
 
 }
 
-.Todo{
-margin: 20px;
-padding: 100px;
-width: auto;
-height: auto;
-background-color: darkblue;
-border-radius: 5px;
-border: 2px solid white;
-overflow: hidden;
+.Todo {
+  margin: 20px;
+  padding: 100px;
+  width: auto;
+  height: auto;
+  background-color: darkblue;
+  border-radius: 5px;
+  border: 2px solid white;
+  overflow: hidden;
 }
 
-input{
+input {
   width: 100%;
   padding: 10px;
   font-size: 18px;
-  margin: 10px 0px; 
+  margin: 10px 0px;
   outline: none;
-  border: none; 
+  border: none;
 }
 
-input:focus{
+input:focus {
   outline: 2px solid #00FFFF;
- box-shadow: 0 0 5px #00FFFF;
+  box-shadow: 0 0 5px #00FFFF;
 }
 
-h1{
+h1 {
   color: white;
   text-align: center;
   text-wrap: nowrap;
+  margin: 20px;
 }
 
-.btn{
+.btn {
   margin: 20px 0px;
   width: 100px;
   height: 40px;
@@ -117,13 +104,13 @@ h1{
 }
 
 
-ol li{
+ol li {
   color: white;
   word-wrap: break-word;
 
 }
 
-.delete{
+.delete {
   padding: 10px;
   width: 100%;
   margin: 10px;
@@ -134,7 +121,7 @@ ol li{
   border-radius: 5px;
 }
 
-.edit{
+.edit {
   width: 100%;
   padding: 10px;
   margin: 10px;
@@ -147,42 +134,42 @@ ol li{
 
 .box {
   display: flex;
-  flex-direction: column; 
-  justify-content: space-between; 
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin: 20px 0; 
+  margin: 20px 0;
 }
 
 @media screen and (min-width:450px) {
-  .box{
+  .box {
     flex-direction: row;
   }
 
 }
 
 @media screen and (max-width:400px) {
-  .TodoContainer{
+  .TodoContainer {
     width: 100%;
     margin: 0px -60px 0px 0px;
   }
 
-  .Todo{
+  .Todo {
     padding-left: 80px;
   }
 
-  input{
+  input {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width:350px) {
-  input{
+  input {
     font-size: 13px;
   }
 }
 
-.reset{
+.reset {
   width: 100%;
   text-wrap: nowrap;
   padding: 10px;
@@ -194,9 +181,3 @@ ol li{
   cursor: pointer;
   border-radius: 5px;
 }
-
-
-
-
-
-
