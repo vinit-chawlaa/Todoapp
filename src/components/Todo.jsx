@@ -1,4 +1,4 @@
-import { useState , useEffect } from "react";
+import { useState , useEffect, useRef } from "react";
 
 
 const Todo = () => {
@@ -6,6 +6,7 @@ const Todo = () => {
     const [inputvalue, setInputvalue] = useState('')
     const [isediting, setIsediting] = useState(false)
     const [currentindex, setCurrentindex] = useState(null)
+    const inputref = useRef(null)
 
     useEffect(() => {
         const savedtask = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -64,6 +65,7 @@ const Todo = () => {
         setIsediting(true)
         setCurrentindex(idx)
         console.log("Editing task:", task[idx]);
+        inputref.current.focus();
     }
 
    
@@ -77,6 +79,7 @@ const Todo = () => {
                 value={inputvalue}
                 placeholder="Add Todo..."
                 onChange={(e) => setInputvalue(e.target.value)}
+                ref={inputref}
             />
            </form>
 
@@ -86,10 +89,10 @@ const Todo = () => {
                 {task.map((item, idx) => (
                     
                     <li key={idx}>   
-                        {item}
+                      {item}
                       <div className="box">
                       <button className="delete"   onClick={() => handledelete(idx)}>Delete</button>
-                      <button className="edit" onClick={() => editask(idx)}>Edit</button>
+                      <button className="edit" onClick={() => {editask(idx); window.scrollTo(0, 0); }}>Edit</button>
                       </div>
                     </li>
                 ))}

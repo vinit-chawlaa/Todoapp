@@ -54,6 +54,7 @@ body{
 .TodoContainer{
   width: 100%;
   max-width: 500px;
+  overflow: hidden;
 
 }
 
@@ -65,6 +66,7 @@ height: auto;
 background-color: darkblue;
 border-radius: 5px;
 border: 2px solid white;
+overflow: hidden;
 }
 
 input{
@@ -91,8 +93,11 @@ h1{
   cursor: pointer;
 }
 
+
 ol li{
   color: white;
+  word-wrap: break-word;
+
 }
 
 .delete{
