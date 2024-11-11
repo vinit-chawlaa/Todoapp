@@ -36,3 +36,113 @@
     transform: rotate(360deg);
   }
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 255, 251);
+}
+
+.TodoContainer{
+  width: 100%;
+  max-width: 500px;
+
+}
+
+.Todo{
+margin: 20px;
+padding: 100px;
+width: auto;
+height: auto;
+background-color: darkblue;
+border-radius: 5px;
+border: 2px solid white;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px 0px;  
+}
+
+h1{
+  color: white;
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+.btn{
+  margin: 20px 0px;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(119, 0, 255);
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+ol li{
+  color: white;
+}
+
+.delete{
+  padding: 10px;
+  width: 100%;
+  margin: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.edit{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: rgb(7, 156, 248);
+  color: white;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0; 
+}
+
+@media screen and (min-width:450px) {
+  .box{
+    flex-direction: row;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .TodoContainer{
+    width: 100%;
+    margin: 0px -60px 0px 0px;
+  }
+
+  .Todo{
+    padding-left: 80px;
+  }
+}
+
+
+
+
+
