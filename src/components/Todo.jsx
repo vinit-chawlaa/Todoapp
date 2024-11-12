@@ -45,6 +45,10 @@ const Todo = () => {
 
             else {
                 setTask([...task, inputvalue])
+                
+                if(task){
+                    window.scrollTo(0,document.body.scrollHeight)
+                }
 
             }
             setInputvalue('')
